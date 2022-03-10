@@ -7,8 +7,11 @@ class Home extends Lightning.Component {
       w: 1920,
       h: 1080,
       color: 0xffff0000,
-      text: {
-        text: "Home",
+      Text: {
+        text: {
+          color: 0xffffffff,
+          text: "Home",
+        },
       },
     };
   }

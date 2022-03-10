@@ -7,8 +7,11 @@ class About extends Lightning.Component {
       w: 1920,
       h: 1080,
       color: 0xff00ff00,
-      text: {
-        text: "About",
+      Text: {
+        text: {
+          text: "About",
+          color: 0xffff00ff,
+        },
       },
     };
   }
