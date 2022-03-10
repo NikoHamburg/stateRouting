@@ -27,6 +27,7 @@ class App extends Lightning.Component {
       { family: "Regular", url: Utils.asset("fonts/Roboto-Regular.ttf") },
     ];
   }
+
   static _template() {
     return {
       Home: {
@@ -62,12 +63,10 @@ class App extends Lightning.Component {
   }
 
   _handleLeft() {
-    console.log("Home");
     this._setState("Home");
   }
 
   _handleRight() {
-    console.log("About");
     this._setState("About");
   }
 }
