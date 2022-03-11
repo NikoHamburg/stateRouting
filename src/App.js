@@ -38,7 +38,6 @@ class App extends Lightning.Component {
         type: About,
       },
       Menu: {
-        y: -200,
         type: Menu,
       },
     };

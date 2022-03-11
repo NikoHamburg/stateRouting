@@ -8,6 +8,7 @@ class Menu extends Lightning.Component {
       w: 1920,
       h: 200,
       color: 0xffaaee99,
+      y: -200,
       Items: {
         x: 400,
         Home: {
