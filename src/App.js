@@ -20,7 +20,7 @@
 import { Lightning, Utils } from "@lightningjs/sdk";
 import { About } from "./components/About";
 import { Home } from "./components/Home";
-// import { Menu } from "./components/menu/Menu";
+import { Menu } from "./components/menu/Menu";
 
 class App extends Lightning.Component {
   static getFonts() {
@@ -39,10 +39,10 @@ class App extends Lightning.Component {
         alpha: 0,
         type: About,
       },
-      // Menu: {
-      //   y: -200,
-      //   type: Menu,
-      // },
+      Menu: {
+        y: -200,
+        type: Menu,
+      },
     };
   }
 
@@ -64,14 +64,6 @@ class App extends Lightning.Component {
           this.tag("About").alpha = 0;
         }
       },
-      // class Menu extends this {
-      //   $enter() {
-      //     this.tag("Menu").y = 0;
-      //   }
-      //   $exit() {
-      //     this.tag("Menu").y = -200;
-      //   }
-      // },
     ];
   }
 
@@ -83,9 +75,13 @@ class App extends Lightning.Component {
     this._setState("About");
   }
 
-  // _handleDown() {
-  //   this._setState("Menu");
-  // }
+  _handleDown() {
+    this.tag("Menu").y = 0;
+  }
+
+  _handleUp() {
+    this.tag("Menu").y = -200;
+  }
 }
 
 export { App };
