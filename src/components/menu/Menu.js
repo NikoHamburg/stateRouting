@@ -48,6 +48,14 @@ class Menu extends Lightning.Component {
       },
     });
   }
+
+  _handleLeft() {
+    console.log(`Left from Menu`);
+  }
+
+  _handleRight() {
+    console.log(`Right from Menu`);
+  }
 }
 
 export { Menu };
