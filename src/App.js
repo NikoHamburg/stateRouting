@@ -32,11 +32,9 @@ class App extends Lightning.Component {
   static _template() {
     return {
       Home: {
-        alpha: 0,
         type: Home,
       },
       About: {
-        alpha: 0,
         type: About,
       },
       Menu: {
@@ -49,38 +47,41 @@ class App extends Lightning.Component {
   static _states() {
     return [
       class Home extends this {
-        $enter() {
-          this.tag("Home").alpha = 1;
-        }
-        $exit() {
-          this.tag("Home").alpha = 0;
+        _getFocused() {
+          return this.tag("Home");
         }
       },
       class About extends this {
-        $enter() {
-          this.tag("About").alpha = 1;
+        _getFocused() {
+          return this.tag("About");
         }
-        $exit() {
-          this.tag("About").alpha = 0;
+      },
+      class Menu extends this {
+        _getFocused() {
+          return this.tag("Menu");
         }
       },
     ];
   }
 
   _handleLeft() {
+    console.log(`Home`);
     this._setState("Home");
   }
 
   _handleRight() {
+    console.log(`About`);
     this._setState("About");
   }
 
   _handleDown() {
-    this.tag("Menu").y = 0;
+    console.log(`Menu`);
+    this._setState("Menu");
   }
 
   _handleUp() {
-    this.tag("Menu").y = -200;
+    console.log(`Home`);
+    this._setState("Home");
   }
 }
 

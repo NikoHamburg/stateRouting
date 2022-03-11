@@ -7,6 +7,7 @@ class Home extends Lightning.Component {
       w: 1920,
       h: 1080,
       color: 0xffff0000,
+      alpha: 0,
       Text: {
         text: {
           color: 0xffffffff,
@@ -14,6 +15,14 @@ class Home extends Lightning.Component {
         },
       },
     };
+  }
+
+  _focus() {
+    this.alpha = 1;
+  }
+
+  _unfocus() {
+    this.alpha = 0;
   }
 }
 

@@ -7,6 +7,7 @@ class About extends Lightning.Component {
       w: 1920,
       h: 1080,
       color: 0xff00ff00,
+      alpha: 0,
       Text: {
         text: {
           text: "About",
@@ -14,6 +15,14 @@ class About extends Lightning.Component {
         },
       },
     };
+  }
+
+  _focus() {
+    this.alpha = 1;
+  }
+
+  _unfocus() {
+    this.alpha = 0;
   }
 }
 

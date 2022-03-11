@@ -13,6 +13,17 @@ class Menu extends Lightning.Component {
         Home: {
           type: MenuItem,
           label: "Home",
+          x: 200,
+        },
+        About: {
+          type: MenuItem,
+          label: "About",
+          x: 400,
+        },
+        Settings: {
+          type: MenuItem,
+          label: "Settings",
+          x: 600,
         },
       },
     };
